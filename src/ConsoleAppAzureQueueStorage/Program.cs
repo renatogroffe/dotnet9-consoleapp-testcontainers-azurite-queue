@@ -48,7 +48,7 @@ foreach (var message in messages.Value)
     k++;
     logger.Information($"Mensagem recebida {k}/{maxMessages}: {message.MessageText}");
     await queueConsumerClient.DeleteMessageAsync(message.MessageId, message.PopReceipt);
-    logger.Information($"Mensagem excluída{k}/{maxMessages}");
+    logger.Information($"Mensagem excluida {k}/{maxMessages}");
     logger.Information("Pressione ENTER para continuar...");
     Console.ReadLine();
 }
